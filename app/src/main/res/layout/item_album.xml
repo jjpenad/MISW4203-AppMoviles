@@ -6,29 +6,28 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <ImageView
-        android:id="@+id/ivAlbum"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        tools:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-
     <TextView
         android:id="@+id/tvnombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Hola"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAlbum"/>
+        tools:text="Hola" />
 
     <TextView
         android:id="@+id/tvfoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Foto"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@id/tvnombre"
-        app:layout_constraintStart_toEndOf="@+id/ivAlbum"/>
+        tools:text="Foto" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="71dp"
+        android:layout_height="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

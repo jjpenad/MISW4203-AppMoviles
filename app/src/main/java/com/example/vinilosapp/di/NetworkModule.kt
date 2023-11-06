@@ -17,7 +17,7 @@ object NetworkModule {
     @Provides
     fun provideBackend(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://localhost:3000/")
+            .baseUrl("https://vynils-back-heroku.herokuapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
