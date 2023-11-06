@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.myToolbar)
+        binding.myToolbar.title="Albums"
 
         binding.recyclerAlbum
         initRecyclerView()

@@ -13,7 +13,8 @@ class AlbumViewholder (view: View):RecyclerView.ViewHolder(view)   {
 
     fun render(albummodel: Album){
 
-        binding.tvnombre.text = albummodel.name
+        binding.tvName.text = albummodel.name
+        binding.tvDescription.text = albummodel.description
 
     }
 
