@@ -1,6 +1,7 @@
 package com.example.vinilosapp.di
 
 import com.example.vinilosapp.data.network.albums.AlbumAPIClient
+import com.example.vinilosapp.data.network.artists.ArtistAPIClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,4 +29,9 @@ object NetworkModule {
         return retrofit.create(AlbumAPIClient::class.java)
     }
 
+    @Singleton
+    @Provides
+    fun provideArtistsApiClient(retrofit: Retrofit): ArtistAPIClient {
+        return retrofit.create(ArtistAPIClient::class.java)
+    }
 }
