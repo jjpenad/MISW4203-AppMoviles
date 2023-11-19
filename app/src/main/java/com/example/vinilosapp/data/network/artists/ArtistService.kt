@@ -1,7 +1,6 @@
 package com.example.vinilosapp.data.network.artists
 
 import android.util.Log
-import com.example.vinilosapp.data.model.Album
 import com.example.vinilosapp.data.model.Artist
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinilosapp.ui.view.adapter.AlbumAdapter
+import com.example.vinilosapp.ui.view.adapter.ArtistAdapter
 
 class Catalogoartistas : AppCompatActivity() {
 
@@ -19,6 +19,6 @@ class Catalogoartistas : AppCompatActivity() {
     fun initRecyclerView(){
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerArtist)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = AlbumAdapter(ArtistProvider.ArtistList)
+        recyclerView.adapter = ArtistAdapter(ArtistProvider.ArtistList)
     }
 }

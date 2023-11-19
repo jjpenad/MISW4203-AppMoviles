@@ -5,20 +5,20 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.vinilosapp.data.model.Album
-import com.example.vinilosapp.ui.view.adapter.AlbumAdapter
+import com.example.vinilosapp.data.model.Artist
 import com.example.vinilosapp.databinding.ActivityMainBinding
-import com.example.vinilosapp.ui.viewmodel.AlbumListViewModel
+import com.example.vinilosapp.ui.view.adapter.ArtistAdapter
+import com.example.vinilosapp.ui.viewmodel.ArtistListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AlbumList : AppCompatActivity() {
+class ArtistList : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private lateinit var adapter: AlbumAdapter
+    private lateinit var adapter: ArtistAdapter
 
-    private val albumListViewModel: AlbumListViewModel by viewModels()
+    private val artistListViewModel: ArtistListViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,31 +27,28 @@ class AlbumList : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.myToolbar)
-        binding.myToolbar.title="Albums"
+        binding.myToolbar.title="Artists"
 
         binding.recyclerAlbum
         initRecyclerView()
-        searchAlbums()
+        searchArtist()
     }
 
-
-
-
     private fun initRecyclerView(){
-        adapter = AlbumAdapter()
+        adapter = ArtistAdapter()
         binding.recyclerAlbum.layoutManager = LinearLayoutManager(this)
         binding.recyclerAlbum.adapter = adapter
     }
 
-    private fun searchAlbums(){
-        albumListViewModel.albums.observe(this@AlbumList) {
-            val albumList: List<Album>? = it
+    private fun searchArtist(){
+        artistListViewModel.artists.observe(this@ArtistList) {
+            val artistList: List<Artist>? = it
             runOnUiThread {
-                adapter.updateList(albumList)
+                adapter.updateList(artistList)
             }
         }
 
-        albumListViewModel.getAlbums()
+        artistListViewModel.getArtists()
     }
 
 
