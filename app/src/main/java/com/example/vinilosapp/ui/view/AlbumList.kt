@@ -1,31 +1,19 @@
 package com.example.vinilosapp.ui.view
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.vinilosapp.AlbumProvider
 import com.example.vinilosapp.data.model.Album
-import com.example.vinilosapp.data.network.albums.AlbumService
 import com.example.vinilosapp.ui.view.adapter.AlbumAdapter
 import com.example.vinilosapp.databinding.ActivityMainBinding
 import com.example.vinilosapp.ui.viewmodel.AlbumListViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import retrofit2.Response
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class AlbumList : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -57,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun searchAlbums(){
-        albumListViewModel.albums.observe(this@MainActivity, Observer {
+        albumListViewModel.albums.observe(this@AlbumList, Observer {
             val albumList: List<Album>? = it
             runOnUiThread{
                 adapter.updateList(albumList)
