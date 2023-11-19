@@ -1,5 +1,6 @@
 package com.example.vinilosapp.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import com.example.vinilosapp.ui.viewmodel.AlbumListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AlbumList : AppCompatActivity() {
+class AlbumList : AppCompatActivity(), AlbumAdapter.OnItemClickListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -40,6 +41,7 @@ class AlbumList : AppCompatActivity() {
 
     private fun initRecyclerView(){
         adapter = AlbumAdapter()
+        adapter.setOnItemClickListener(this) // Set the click listener
         binding.recyclerAlbum.layoutManager = LinearLayoutManager(this)
         binding.recyclerAlbum.adapter = adapter
     }
@@ -53,6 +55,13 @@ class AlbumList : AppCompatActivity() {
         })
 
         albumListViewModel.getAlbums()
+    }
+
+    // Implementation of the click listener
+    override fun onItemClick(albumId: Double) {
+        val intent = Intent(this, AlbumDetail::class.java)
+        intent.putExtra("ALBUM_ID", albumId)
+        startActivity(intent)
     }
 
 
