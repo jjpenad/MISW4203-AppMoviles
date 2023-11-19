@@ -34,5 +34,4 @@ object NetworkModule {
     fun provideArtistsApiClient(retrofit: Retrofit): ArtistAPIClient {
         return retrofit.create(ArtistAPIClient::class.java)
     }
-
 }
