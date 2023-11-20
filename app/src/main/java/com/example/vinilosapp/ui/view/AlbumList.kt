@@ -8,8 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vinilosapp.data.model.Album
-import com.example.vinilosapp.ui.view.adapter.AlbumAdapter
 import com.example.vinilosapp.databinding.ActivityMainBinding
+import com.example.vinilosapp.ui.view.adapter.AlbumAdapter
 import com.example.vinilosapp.ui.viewmodel.AlbumListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,6 +19,7 @@ class AlbumList : AppCompatActivity(), AlbumAdapter.OnItemClickListener {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: AlbumAdapter
+    val EXTRA_MESSAGE = "ALBUMID"
 
     private val albumListViewModel: AlbumListViewModel by viewModels()
 
@@ -60,7 +61,7 @@ class AlbumList : AppCompatActivity(), AlbumAdapter.OnItemClickListener {
     // Implementation of the click listener
     override fun onItemClick(albumId: Double) {
         val intent = Intent(this, AlbumDetail::class.java)
-        intent.putExtra("ALBUM_ID", albumId)
+        intent.putExtra("ALBUM_ID", albumId.toInt().toString())
         startActivity(intent)
     }
 
