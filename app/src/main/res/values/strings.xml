@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Vinilos App</string>
+    <string name="albumImage">albumImage</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="artistImage">artistImage</string>
 </resources>

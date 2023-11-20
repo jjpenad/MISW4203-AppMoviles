@@ -1,7 +1,6 @@
 package com.example.vinilosapp.data.network.artists
 
 import android.util.Log
-import com.example.vinilosapp.data.model.Album
 import com.example.vinilosapp.data.model.Artist
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -15,11 +14,11 @@ class ArtistService @Inject constructor(
         return withContext(Dispatchers.IO){
             val response = api.getArtists()
             if(response.isSuccessful){
-                Log.i("ArtistService", "Falla Listar")
+                Log.i("ArtistService", "Funciona listar")
                 response.body()
             }
             else{
-                Log.i("ArtistService", "Funciona listar")
+                Log.i("ArtistService", "Falla Listar")
                 listOf()
             }
         }
@@ -29,11 +28,11 @@ class ArtistService @Inject constructor(
         return withContext(Dispatchers.IO){
             val response = api.getArtistById(id)
             if(response.isSuccessful){
-                Log.i("ArtistService", "Falla Get By Id")
+                Log.i("ArtistService", "Funciona Get By Id")
                 response.body()
             }
             else{
-                Log.i("ArtistService", "Funciona Get By Id")
+                Log.i("ArtistService", "Falla Get By Id")
                 null
             }
         }

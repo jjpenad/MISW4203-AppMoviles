@@ -16,14 +16,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
+
         <activity
-            android:name=".ui.view.CollectorList"
+            android:name=".ui.view.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.view.AlbumList"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.view.AlbumDetail"
+            android:exported="false"
+            android:parentActivityName=".ui.view.AlbumList"
+        >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.view.AlbumList" />
+        </activity>
+
+        <activity
+            android:name=".ui.view.ArtistList"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.view.ArtistDetail"
+            android:exported="false"
+            android:parentActivityName=".ui.view.ArtistList"
+        >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.view.ArtistList" />
         </activity>
     </application>
 
