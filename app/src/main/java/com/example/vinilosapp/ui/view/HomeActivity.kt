@@ -24,6 +24,7 @@ class HomeActivity: AppCompatActivity() {
         //Settings
         setArtistsAssets()
         setAlbumsAssets()
+        setCollectorsAssets()
     }
 
     private fun setArtistsAssets(){
@@ -38,6 +39,12 @@ class HomeActivity: AppCompatActivity() {
         }
     }
 
+    private fun setCollectorsAssets(){
+        binding.collectorsBtn.setOnClickListener(){
+            navigateToCollectors()
+        }
+    }
+
     private fun navigateToAlbums(){
         val intent = Intent(this, AlbumList::class.java)
         startActivity(intent)
@@ -45,6 +52,11 @@ class HomeActivity: AppCompatActivity() {
 
     private fun navigateToArtists(){
         val intent = Intent(this, ArtistList::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToCollectors(){
+        val intent = Intent(this, CollectorList::class.java)
         startActivity(intent)
     }
 }

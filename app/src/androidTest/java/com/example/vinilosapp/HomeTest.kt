@@ -57,5 +57,12 @@ class HomeTest {
                 withText("Artists")
             )
         ).check(ViewAssertions.matches(isDisplayed()))
+
+        onView(
+            allOf(
+                withId(R.id.collectorsBtn),
+                withText("Collectors")
+            )
+        ).check(ViewAssertions.matches(isDisplayed()))
     }
 }
