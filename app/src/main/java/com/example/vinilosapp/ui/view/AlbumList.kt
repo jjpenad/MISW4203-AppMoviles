@@ -18,7 +18,6 @@ class AlbumList : AppCompatActivity(), AlbumAdapter.OnItemClickListener {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: AlbumAdapter
-    val EXTRA_MESSAGE = "ALBUMID"
 
     private val albumListViewModel: AlbumListViewModel by viewModels()
 

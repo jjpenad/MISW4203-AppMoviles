@@ -8,12 +8,6 @@ import com.example.vinilosapp.data.model.Album
 
 class AlbumAdapter (private var albumList:List<Album>? = emptyList()): RecyclerView.Adapter<AlbumViewholder>(){
 
-    private var onItemClickListener: OnItemClickListener? = null
-
-    fun setOnItemClickListener(listener: OnItemClickListener) {
-        this.onItemClickListener = listener
-    }
-
     fun updateList(albumList: List<Album>?){
         this.albumList=albumList
         notifyDataSetChanged()
@@ -26,22 +20,9 @@ class AlbumAdapter (private var albumList:List<Album>? = emptyList()): RecyclerV
 
 
     override fun onBindViewHolder(holder: AlbumViewholder, position: Int) {
-
         (albumList?.get(position) ?:null)?.let { holder.render(it) }
-
-        // Set click listener in onBindViewHolder
-        holder.itemView.setOnClickListener {
-            val albumId = albumList?.get(position)?.id
-            if (albumId != null) {
-                onItemClickListener?.onItemClick(albumId)
-            }
-        }
     }
 
-
-    interface OnItemClickListener {
-        fun onItemClick(albumId: Double) // Change the type of ID according to your Album model
-    }
 }
 
 

@@ -16,9 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
-
         <activity
-            android:name=".ui.view.HomeActivity"
+            android:name=".ui.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< Updated upstream
+=======
         <activity
             android:name=".ui.view.AlbumList"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity
             android:name=".ui.view.AlbumDetail"
@@ -39,6 +40,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.view.AlbumList" />
         </activity>
+
+        <activity
+            android:name=".ui.view.ArtistList"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ui.view.ArtistDetail"
+            android:exported="false"
+            android:parentActivityName=".ui.view.ArtistList"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.view.ArtistList" />
+        </activity>
+
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

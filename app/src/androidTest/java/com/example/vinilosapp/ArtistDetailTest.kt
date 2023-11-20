@@ -11,51 +11,38 @@ import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.intent.rule.IntentsTestRule
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.vinilosapp.ui.view.AlbumDetail
 import com.example.vinilosapp.ui.view.AlbumList
-import com.example.vinilosapp.ui.view.HomeActivity
+import com.example.vinilosapp.ui.view.ArtistDetail
 import com.example.vinilosapp.ui.view.adapter.AlbumViewholder
-import org.hamcrest.Matchers.allOf
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class HomeTest {
+class ArtistDetailTest {
 
 
     @Before
     fun launchActivity() {
         // Launch the activity
-        ActivityScenario.launch(HomeActivity::class.java)
+        ActivityScenario.launch(ArtistDetail::class.java)
         Intents.init()
     }
 
     @Test
-    fun homeFields() {
+    fun albumDetail() {
         try {
             Thread.sleep(2000)
         } catch (e: InterruptedException) {
             e.printStackTrace()
         }
 
-        onView(withId(R.id.appTitle)).check(ViewAssertions.matches(isDisplayed()))
+        onView(withId(R.id.ivArtistCover)).check(ViewAssertions.matches(isDisplayed()))
+        onView(withId(R.id.tvArtistTitle)).check(ViewAssertions.matches(isDisplayed()))
+        onView(withId(R.id.tvArtistDescription)).check(ViewAssertions.matches(isDisplayed()))
 
-        onView(
-            allOf(
-                withId(R.id.albumsBtn),
-                withText("Albums")
-            )
-        ).check(ViewAssertions.matches(isDisplayed()))
-
-        onView(
-            allOf(
-                withId(R.id.artistsBtn),
-                withText("Artists")
-            )
-        ).check(ViewAssertions.matches(isDisplayed()))
     }
 }
