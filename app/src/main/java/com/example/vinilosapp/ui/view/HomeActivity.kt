@@ -33,7 +33,9 @@ class HomeActivity: AppCompatActivity() {
     }
 
     private fun setAlbumsAssets(){
-
+        binding.artistsBtn.setOnClickListener(){
+            navigateToArtists()
+        }
     }
 
     private fun navigateToAlbums(){
@@ -41,4 +43,8 @@ class HomeActivity: AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun navigateToArtists(){
+        val intent = Intent(this, ArtistList::class.java)
+        startActivity(intent)
+    }
 }

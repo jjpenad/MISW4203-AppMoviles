@@ -14,11 +14,11 @@ class ArtistService @Inject constructor(
         return withContext(Dispatchers.IO){
             val response = api.getArtists()
             if(response.isSuccessful){
-                Log.i("ArtistService", "Falla Listar")
+                Log.i("ArtistService", "Funciona listar")
                 response.body()
             }
             else{
-                Log.i("ArtistService", "Funciona listar")
+                Log.i("ArtistService", "Falla Listar")
                 listOf()
             }
         }
@@ -28,11 +28,11 @@ class ArtistService @Inject constructor(
         return withContext(Dispatchers.IO){
             val response = api.getArtistById(id)
             if(response.isSuccessful){
-                Log.i("ArtistService", "Falla Get By Id")
+                Log.i("ArtistService", "Funciona Get By Id")
                 response.body()
             }
             else{
-                Log.i("ArtistService", "Funciona Get By Id")
+                Log.i("ArtistService", "Falla Get By Id")
                 null
             }
         }

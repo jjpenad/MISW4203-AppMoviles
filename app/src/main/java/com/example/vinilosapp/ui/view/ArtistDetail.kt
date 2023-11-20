@@ -23,10 +23,17 @@ class ArtistDetail : AppCompatActivity() {
 
         binding = DetailArtistBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        searchArtistById()
+
+
+        // Get the message from the intent
+        // Get the message from the intent
+        val intent = intent
+        val artistId: String? = intent.getStringExtra("ARTIST_ID")
+        print(artistId)
+        searchArtistById(artistId?.toInt())
     }
-    private fun searchArtistById(){
-        val artistId = 100
+    private fun searchArtistById(id:Int?){
+        val artistId = id ?: 100
         artistDetailViewModel.artist.observe(this@ArtistDetail, Observer {
             runOnUiThread {
                 setArtistInfo(it)
