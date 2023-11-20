@@ -14,11 +14,12 @@ class AlbumService @Inject constructor(
         return withContext(Dispatchers.IO){
             val response = api.getAlbums()
             if(response.isSuccessful){
-                Log.i("AlbumService", "Falla Listar")
+                print(response.body())
+                Log.i("AlbumService", "Funciona listar")
                 response.body()
             }
             else{
-                Log.i("AlbumService", "Funciona listar")
+                Log.i("AlbumService", "Falla Listar")
                 listOf()
             }
         }
