@@ -1,12 +1,12 @@
 package com.example.vinilosapp
 
-import com.example.vinilosapp.data.model.Album
+import com.example.vinilosapp.data.model.Artist
 
 class ArtistProvider {
 
     companion object {
 
-        val ArtistList= listOf<Album>(
+        val ArtistList= listOf<Artist>(
 
         )
     }
