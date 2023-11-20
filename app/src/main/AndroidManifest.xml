@@ -53,6 +53,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.view.ArtistList" />
         </activity>
+
+        <activity
+            android:name=".ui.view.CollectorList"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.view.CollectorDetail"
+            android:exported="false"
+            android:parentActivityName=".ui.view.CollectorList"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.view.CollectorList" />
+        </activity>
     </application>
 
 </manifest>
