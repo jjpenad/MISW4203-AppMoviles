@@ -11,7 +11,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.vinilosapp.AlbumProvider
 import com.example.vinilosapp.data.model.Album
 import com.example.vinilosapp.data.network.albums.AlbumService
 import com.example.vinilosapp.ui.view.adapter.AlbumAdapter

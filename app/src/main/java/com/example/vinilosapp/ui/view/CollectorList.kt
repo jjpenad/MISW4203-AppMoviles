@@ -1,5 +1,6 @@
 package com.example.vinilosapp.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import com.example.vinilosapp.ui.viewmodel.CollectorListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CollectorList : AppCompatActivity() {
+class CollectorList : AppCompatActivity(), CollectorAdapter.OnItemClickListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMain3Binding
@@ -40,6 +41,7 @@ class CollectorList : AppCompatActivity() {
 
     private fun initRecyclerView(){
         adapter = CollectorAdapter()
+        adapter.setOnItemClickListener(this) // Set the click listener
         binding.recyclerCollector.layoutManager = LinearLayoutManager(this)
         binding.recyclerCollector.adapter = adapter
     }
@@ -53,6 +55,13 @@ class CollectorList : AppCompatActivity() {
         })
 
         collectorListViewModel.getCollectors()
+    }
+
+    // Implementation of the click listener
+    override fun onItemClick(collectorId: Int) {
+        val intent = Intent(this, CollectorDetail::class.java)
+        intent.putExtra("COLLECTOR_ID", collectorId.toString())
+        startActivity(intent)
     }
 
 

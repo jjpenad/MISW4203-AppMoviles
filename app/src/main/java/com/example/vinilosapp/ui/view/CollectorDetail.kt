@@ -25,10 +25,14 @@ class CollectorDetail : AppCompatActivity() {
 
         binding = DetailCollectorBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        searchCollectorById()
+        // Get the message from the intent
+        // Get the message from the intent
+        val intent = intent
+        val collectorId: String? = intent.getStringExtra("COLLECTOR_ID")
+        searchCollectorById(collectorId?.toInt())
     }
-    private fun searchCollectorById(){
-        val collectorId = 100
+    private fun searchCollectorById(id:Int?){
+        val collectorId = id ?: 100
         collectorDetailViewModel.collector.observe(this@CollectorDetail, Observer {
             runOnUiThread {
                 setCollectorInfo(it)
