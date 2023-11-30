@@ -10,5 +10,6 @@ data class Album(
     @SerializedName("releaseDate") val releaseDate: String,
     @SerializedName("description") val description: String,
     @SerializedName("genre") val genre: String,
-    @SerializedName("recordLabel") val recordLabel: String
+    @SerializedName("recordLabel") val recordLabel: String,
+    @SerializedName("songs") val songs: MutableList<Song>
 )
