@@ -40,7 +40,7 @@ class AlbumAdapter (private var albumList:List<Album>? = emptyList()): RecyclerV
 
 
     interface OnItemClickListener {
-        fun onItemClick(albumId: Double) // Change the type of ID according to your Album model
+        fun onItemClick(albumId: String?) // Change the type of ID according to your Album model
     }
 }
 

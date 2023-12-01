@@ -33,12 +33,18 @@ class AlbumCreationActivity : AppCompatActivity() {
         createAlbumButton.setOnClickListener {
             val albumName = findViewById<EditText>(R.id.albumNameEditText).text.toString()
             val albumDescription = findViewById<EditText>(R.id.albumDescriptionEditText).text.toString()
+            val albumId = findViewById<EditText>(R.id.albumIdEditText).text.toString()
+            val albumCover = findViewById<EditText>(R.id.albumCoverEditText).text.toString()
+            val albumReleasedate = findViewById<EditText>(R.id.albumReleasedateEditText).text.toString()
+            val albumGenre = findViewById<EditText>(R.id.albumGenreEditText).text.toString()
+            val albumRecordlabel = findViewById<EditText>(R.id.albumRecordlabelEditText).text.toString()
+
 
             // Aquí recolectas las canciones seleccionadas
             val selectedSongs = songsList.filter { it.isSelected }
 
             // Crear el álbum
-            val newAlbum = Album(albumName, albumDescription, selectedSongs.toMutableList())
+            val newAlbum = Album(albumName, albumDescription,albumId,albumCover,albumReleasedate,albumGenre,albumRecordlabel, selectedSongs)
             // Aquí deberías guardar el álbum en tu base de datos o backend
         }
 

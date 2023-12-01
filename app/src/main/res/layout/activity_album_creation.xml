@@ -7,10 +7,31 @@
     android:padding="16dp">
 
     <EditText
+        android:id="@+id/albumIdEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id del album" />
+
+
+    <EditText
         android:id="@+id/albumNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre del Álbum" />
+
+    <EditText
+        android:id="@+id/albumCoverEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cover del album" />
+
+    <EditText
+        android:id="@+id/albumReleasedateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Fecha de Lanzamiento del album" />
+
 
     <EditText
         android:id="@+id/albumDescriptionEditText"
@@ -18,6 +39,20 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:hint="Descripción del Álbum" />
+
+    <EditText
+        android:id="@+id/albumGenreEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Género del Álbum" />
+
+    <EditText
+        android:id="@+id/albumRecordlabelEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Etiqueta de registro del Álbum" />
 
     <ListView
         android:id="@+id/songsListView"

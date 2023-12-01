@@ -57,9 +57,9 @@ class AlbumList : AppCompatActivity(), AlbumAdapter.OnItemClickListener {
     }
 
     // Implementation of the click listener
-    override fun onItemClick(albumId: Double) {
+    override fun onItemClick(albumId: String?) {
         val intent = Intent(this, AlbumDetail::class.java)
-        intent.putExtra("ALBUM_ID", albumId.toInt().toString())
+        intent.putExtra("ALBUM_ID", albumId?.toInt().toString())
         startActivity(intent)
     }
 
