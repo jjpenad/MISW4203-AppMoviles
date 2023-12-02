@@ -1,6 +1,7 @@
 package com.example.vinilosapp.di
 
 import com.example.vinilosapp.data.network.albums.AlbumAPIClient
+import com.example.vinilosapp.data.network.albums.tracks.TrackAPIClient
 import com.example.vinilosapp.data.network.artists.ArtistAPIClient
 import com.example.vinilosapp.data.network.collectors.CollectorAPIClient
 import dagger.Module
@@ -40,5 +41,11 @@ object NetworkModule {
     @Provides
     fun provideCollectorsApiClient(retrofit: Retrofit): CollectorAPIClient {
         return retrofit.create(CollectorAPIClient::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideTracksApiClient(retrofit: Retrofit): TrackAPIClient {
+        return retrofit.create(TrackAPIClient::class.java)
     }
 }
