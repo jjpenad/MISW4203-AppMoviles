@@ -42,10 +42,11 @@ object NetworkModule {
     fun provideCollectorsApiClient(retrofit: Retrofit): CollectorAPIClient {
         return retrofit.create(CollectorAPIClient::class.java)
     }
-
+    
     @Singleton
     @Provides
     fun provideTracksApiClient(retrofit: Retrofit): TrackAPIClient {
         return retrofit.create(TrackAPIClient::class.java)
     }
+
 }
