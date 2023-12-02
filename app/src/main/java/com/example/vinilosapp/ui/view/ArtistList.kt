@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vinilosapp.data.model.Artist
 import com.example.vinilosapp.databinding.ActivityMainBinding
 import com.example.vinilosapp.ui.view.adapter.ArtistAdapter
-import com.example.vinilosapp.ui.view.adapter.ArtistViewholder
 import com.example.vinilosapp.ui.viewmodel.ArtistListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
