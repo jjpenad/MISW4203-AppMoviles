@@ -67,6 +67,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.view.CollectorList" />
         </activity>
+
+        <activity
+            android:name=".ui.view.AlbumAddTrack"
+            android:exported="false"
+            android:parentActivityName=".ui.view.AlbumAddTrack"
+            >
+        </activity>
     </application>
 
 </manifest>

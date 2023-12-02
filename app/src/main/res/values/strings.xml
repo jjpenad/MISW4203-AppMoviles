@@ -5,4 +5,8 @@
     <string name="albums">Albums</string>
     <string name="artistImage">artistImage</string>
     <string name="collectors">Collectors</string>
+    <string name="tracksTitle" >Tracks</string>
+    <string name="addTrackToAlbum">New Track</string>
+    <string name="formTrackName">Name</string>
+    <string name="formTrackDuration" >Duration</string>
 </resources>

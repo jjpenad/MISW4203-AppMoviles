@@ -1,5 +1,6 @@
 package com.example.vinilosapp.data.network.albums.tracks
 
+import com.example.vinilosapp.data.model.CreateTrackDTO
 import com.example.vinilosapp.data.model.Track
 import retrofit2.Response
 import retrofit2.http.Body
@@ -14,5 +15,5 @@ interface TrackAPIClient {
     suspend fun getAlbumTrackById(@Path("albumId") albumId: Int, @Path("trackId") trackId: Int): Response<Track>
 
     @POST("/albums/{albumId}/tracks")
-    suspend fun addTrackToAlbum(@Path("albumId") albumId: Int, @Body track: Track): Response<Track>
+    suspend fun addTrackToAlbum(@Path("albumId") albumId: Int, @Body track: CreateTrackDTO): Response<Track>
 }
