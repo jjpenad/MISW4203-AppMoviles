@@ -47,6 +47,12 @@ class CollectorDetail : AppCompatActivity() {
             binding.ivCollectorName.text =collector.name
             binding.ivCollectorPhone.text=collector.telephone
             binding.ivCollectorEmail.text=collector.email
+            val lista=collector.comments
+            for(i in lista.indices){
+                binding.ivCollectorCommentDescription.text= lista[i].description
+                binding.ivCollectorCommentRating.rating= lista[i].rating.toFloat()
+            }
+
         }
     }
 
