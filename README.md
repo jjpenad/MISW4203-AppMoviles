@@ -1,5 +1,4 @@
 # MISW4203-AppMoviles
-¡Claro! Aquí tienes un ejemplo básico de un archivo README para un proyecto de Android llamado "MISW4203-AppMoviles" que utiliza Kotlin en Android Studio:
 
 ```markdown
 # MISW4203-AppMoviles
