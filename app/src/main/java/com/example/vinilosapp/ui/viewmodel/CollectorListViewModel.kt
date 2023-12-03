@@ -27,6 +27,7 @@ class CollectorListViewModel @Inject constructor(
                 if (collectorsList != null) {
                     collectors.postValue(ArrayList(collectorsList.map { it.copy() }))
                 }
+                println(collectors)
             }
         }
     }
