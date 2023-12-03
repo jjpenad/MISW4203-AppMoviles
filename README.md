@@ -66,11 +66,3 @@ La estructura del proyecto está organizada de la siguiente manera:
          -- res/
 -- ...
 
-```
-
-
-¡Gracias por tu interés en MISW4203-AppMoviles!
-
-```
-
-Recuerda personalizar la información como las capturas de pantalla, las características específicas del proyecto, la estructura del directorio y la información de contacto según las necesidades de tu aplicación.
