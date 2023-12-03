@@ -3,6 +3,8 @@
 ```markdown
 # MISW4203-AppMoviles
 
+El APK para instalar la aplicación directamente se encuentra en la carpeta APK con nombre app-debug-s3.apk
+
 Este proyecto es una aplicación móvil desarrollada en Kotlin utilizando Android Studio para el curso MISW4203 - Desarrollo de Aplicaciones Móviles.
 # Descripción
 Es un app para gestionar canciones con álbumes y artistas.
@@ -28,7 +30,7 @@ La aplicación tiene como objetivo que se pueda manejar la música que se tiene 
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/MISW4203-AppMoviles.git
+git clone [https://github.com/tuusuario/MISW4203-AppMoviles.git](https://github.com/jjpenad/MISW4203-AppMoviles.git)
 ```
 
 2. Abre el proyecto en Android Studio.
@@ -56,9 +58,8 @@ La estructura del proyecto está organizada de la siguiente manera:
       -- main/
          -- java/
             -- com/
-               -- tuempresa/
-                  -- misw4203appmoviles/
-                     -- activities/
+               -- vinilosapp
+                  -- activities/
                      -- adapters/
                      -- models/
                      -- ...
@@ -67,16 +68,6 @@ La estructura del proyecto está organizada de la siguiente manera:
 
 ```
 
-## Licencia
-
-Este proyecto está licenciado bajo [nombre de la licencia]. Consulta el archivo LICENSE para obtener más detalles.
-
-## Contacto
-
-Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto:
-
-- Correo Electrónico: sg.moreno1543@uniandes.edu.co
-- 
 
 ¡Gracias por tu interés en MISW4203-AppMoviles!
 
